@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="description.css">
+    <title>Data Description</title>
+    <link rel="icon" href="https://ShacklefordFarms.github.io/Images/page_logo.png">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="../Home">
+        <img src="https://ShacklefordFarms.github.io/Images/Farm_logo.png" class="d-inline-block align-top" alt="Farm Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../Home">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="../Soil-Map">Soil Map<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Data Description/Download</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="../Info">Data Description</a>
+              <a class="dropdown-item" href="../data/data.zip">Download Data</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+      <div class="description">
+        <h1>Shackleford Farms Soil Type Map</h1>
+        <p class="lead">The map below can be seen with more options by accessing the 'Soil Map' tab in the top of this page!</p>
+      </div>
+      <div id="map"></div>
+      <br>
+      <hr>
+      <div>
+        <h2>About the dataset</h2>
+        <p align='justify'>The data presented in the map above is a subset from the United States' soil type dataset.
+          According to USDA, this data is produced by the National Cooperative Soil Survey; which is operated by the USDA Natural Resources Conservation Services (NRCS).
+          This data is available for 95% of the nation's counties and can be easily downloaded throught their <a href="https://websoilsurvey.sc.egov.usda.gov/App/WebSoilSurvey.aspx">website</a>.
+        </p>
+
+        <h3>Description</h3>
+        <p align='justify'>The data presented in the map corresponds to Shackleford Farms' production fields. It contains polygons that represents the area covered by a certain type of soil.
+          The dataset has six different classes, five for soil types and one for superficial water. The soil types presented in this area are: Schriever-Thibaut clays, Thibaut silty clay, Cancienne silt loam, Schriever clay and Udarents.
+          Moreover, the dataset presents some other information and properties for the different soil types. That information was acquired by surveying the areas, taking soil samples and submitting it to laboratorial analysis. In addition,
+          it was added to the data the area of the polygons; which represents that soil type coverage area inside the Shackleford Farms.</p>
+        <p>
+          To download the data as a shapefile just click in the 'Data Description/Download' (top of this page), and then 'Download Data'
+        </p>
+
+        <h3>Service URL</h3>
+        <ul>
+          <li><a href="https://websoilsurvey.sc.egov.usda.gov/App/WebSoilSurvey.aspx">"https://websoilsurvey.sc.egov.usda.gov/App/WebSoilSurvey.aspx</a></li>
+        </ul>
+
+        <h3>Credits</h3>
+        <p>Natural Resources Conservation Services; U.S. Department of Agriculture</p>
+
+        <h3>Terms of Use</h3>
+        <p align='justify'>PLEASE READ THESE TERMS AND CONDITIONS OF USE CAREFULLY BEFORE USING THIS DATA. By using this data, you signify your consent to these Terms and Conditions. If you do not agree to all of these Terms and Conditions of use, please do not use this data!</p>
+          <br>
+          <p>Raw data available in the Web Soil Survey <a href="https://websoilsurvey.sc.egov.usda.gov/App/WebSoilSurvey.aspx">website</a>. Processed data obtained and owned by Shackleford Farms. Do not use it without permission. Do not share this data or any information in this web page.</p>
+          <p><b>Violators will be prosecuted.</b></p>
+      </div>
+      <div>
+        <h2>Analysis</h2>
+        <p class="lead">What do this map tell us about the data?</p>
+        <p align='justify'>This map presents the soil type spatial variability inside the Shackleford Farms' fields. This information is very useful and important for agricultural
+        practices and management. This kind of soil type information could be used in order to allocate different crops, varieties or hybrids. The decision about the type of plant
+        to be planted in a certain are would be by matching the soil type with the plant that would produce the most in that area. Moreover, the soil ohter soil information, such as drainage,
+        could be used in order to know what part of the field would have the most amount of water a few days after a rain. </p>
+        <p align='justify'> Those are some examples of how the information presented in the map could be useful. However, the information presented could be used for many other purposes.</p>
+
+      </div>
+    </main><!-- /.container -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="map.js"></script>
+    <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+  </body>
+</html>
